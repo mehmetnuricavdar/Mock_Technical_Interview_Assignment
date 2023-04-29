@@ -10,8 +10,12 @@ export default function App() {
   }
 
   function handleSubmit() {
-    console.log(`Submitted rating: ${rating}`);
-    setFormSubmitted(true);
+    if (!rating) {
+      alert("Please rate how we did!");
+    } else {
+      console.log(`Submitted rating: ${rating}`);
+      setFormSubmitted(true);
+    }
   }
 
   if (formSubmitted) {
